@@ -55,7 +55,7 @@ function onCheckboxChange (e){
 //  get data form localStorage, if data == true,  render a markup
 function getTasks(){
     const data = localStorage.getItem('taskManager');
-    console.log(data)
+    
     if (data){
         return
     } else {
