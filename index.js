@@ -56,10 +56,10 @@ function getTasks(){
     const data = localStorage.getItem('taskManager');
     
     if (data){
-        return
-    } else {
         refs.main.innerHTML = JSON.parse(data)
-    }
+    } 
+    
+    return
 };
 getTasks()
 
