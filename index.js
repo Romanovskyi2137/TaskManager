@@ -1,6 +1,5 @@
 "use strict"
-// import {taskTemp} from 'template.js';
-// import {localStorageUpdate} from 'local_storage_servise.js'
+
 
 const refs = {
     main: document.querySelector('.main'),
@@ -67,14 +66,13 @@ getTasks()
 // save changes every DELAY 
 const DELAY = 1000;
 
-const saveInterval = setInterval(() => {
-    localStorageUpdate(refs.main.innerHTML)
-}, DELAY)
-
-
 function localStorageUpdate(el){
     localStorage.setItem('taskManager', JSON.stringify(el))
 }
+
+const saveInterval = setInterval(() => {
+    localStorageUpdate(refs.main.innerHTML)
+}, DELAY)
 
 function taskTemp (value){
     return `<li>
@@ -83,3 +81,4 @@ function taskTemp (value){
                 <img class="closeBtn" src="img/close_icon.png"></img>
             </li>`
 }
+
